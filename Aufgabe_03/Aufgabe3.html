@@ -3,85 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potion Creator</title>
-    <link rel="stylesheet" href="PotionMaker.css">
-    <script src="PotionMaker.js"></script>
+    <script src="Aufgabe3.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="Aufgabe3.css">
+    <title>L03 Hexenkessel Formular</title>
 </head>
 <body>
-    <h1>Potion Creator</h1>
-    <form id="form">
-    <div id="recipe">
-        <h3>General Information</h3>
+    <header>
+        <h1>MAGIC POTION EDITOR</h1>
+        <p>Create your potion here step by step</p>
+    </header>
+    <div id="container">
+    
+    <form>
+    <div id="Infoform">
+        <h2>Potion Information</h2>
         <fieldset>
-            <legend>Name</legend>
-            <input type="text" name="potionName" placeholder="This potion is called...">
+            <legend>Name of potion</legend>
+            <input type="text" name="potion" id="potionname" placeholder="type name of potion here">
         </fieldset>
+
         <fieldset>
-            <legend>Risks and Side Effects</legend>
-            <textarea name="description" placeholder="describe risks and side effects here"></textarea>
+            <legend>Risks and Sideeffects</legend>
+            <textarea name="description" id="description" cols="45" rows="2" placeholder="describe risks and side effects here"></textarea>
         </fieldset>
+
         <fieldset>
-            <legend>Effects</legend>
-            <input type="radio" name="effect" id="love" value="Love" checked>
-            <label for="love">Love</label>
-            <input type="radio" name="effect" id="speed" value="Speed">
-            <label for="speed">Speed</label>
-            <input type="radio" name="effect" id="strength" value="Strength">
-            <label for="strength">Strength</label>
+            <legend>Effect and Duration</legend>
+            <select name="effect" id="effect">
+                <option value="Unknown">Unknown</option>
+                <option value="Lovepotion">Lovepotion</option>
+                <option value="Healpotion">Healpotion</option>
+                <option value="Luckpotion">Luckpotion</option>
+                <option value="Strengthpotion">Strengthpotion</option>
+                <option value="Sleeppotion">Sleeppotion</option>
+                <option value="Truthpotion">Wahrheitstrank</option>
+               
+            </select>
+            
+            <legend>Duration of effect</legend>
+            Minutes:
+            <input type="number" name="duration" min="1" max="800" step="1" id="minutes" value="1">
+
         </fieldset>
-        <fieldset>
-            <legend>Duration of Effect</legend>
-            <span>
-                0 h
-                <input type="range" name="duration" id="Duration" min="0.1" max="24" step="0.1">
-                24 h
-            </span>
-        </fieldset>
-        
-        <div id="instructions">
-            <h3>Instructions</h3>
+    </div>
+
+    <div id="instructionsform">
+        <h2>Potion Information</h2>
         <fieldset>
             <legend>Ingredients</legend>
-            <input type="checkbox" name="ingredient" id="spiderLegs" value="SpiderLegs" checked>
-            <label for="spiderLegs">Spider-Legs</label>
-            <input type="number" name="amount" id="amount" step="1" min="1" max="50" value="1" price="450">
-            
-            <input type="checkbox" name="ingredient" id="dragonBlood" value="DragonBlood">
-            <label for="dragonBlood">Dragon-Blood</label>
-            <input type="number" name="amount" id="amount" step="1" min="1" max="50" value="1" price="250">
-            
-            <input type="checkbox" name="ingredient" id="mouseHair" value="MouseHair">
-            <label for="mouseHair">Mouse-Hair</label>
-            <input type="number" name="amount" id="amount" step="1" min="1" max="50" value="1" price="650">
+            <ul>
+                <li>
+                    <label for="spiderlegs">
+                    <input type="checkbox" name="ingredients" value="Spiderlegs" id="spiderlegs"> Spiderlegs
+                    </label>
+                    <input type="number" name="Spideramount" min="1" max="100" step="1" id="spideramount" value="1"> pieces
+                </li>
+
+                <li>
+                    <label for="toadeyes">
+                    <input type="checkbox" name="ingredients" value="Toadeyes" id="toadeyes"> Toadeyes
+                    </label>
+                    <input type="number" name="toadamount" min="1" max="100" step="1" id="toadamount" value="1"> pieces
+                </li>
+
+                <li>
+                    <label for="dragonliver">
+                    <input type="checkbox" name="ingredients" value="Dragonliver" id="dragonliver"> Dragonliver
+                    </label>
+                    <input type="number" name="Dragonamount" min="1" max="100" step="1" id="dragonamount" value="1"> pieces
+                </li>
+
+            </ul>
         </fieldset>
+
         <fieldset>
-            <legend>Temperatur in °C</legend>
-            <input type="number" name="temperatur" id="Temperatur" step="1" min="-30" max="150" value="0">
+            <legend>Temperature</legend>
+                    <label for="heat">
+                    <input type="radio" name="Temperature" id="heat" value="heat potion">heat
+                    </label>
+                    <label for="cool">
+                    <input type="radio" name="Temperature" id="cool" value="cool potion">cool down
+                    </label>
+                    <label for="temperature">to
+                    <input type="number" name="Degree" min="-200" max="100" step="0.1" id="temperature">°C
+                    </label>
+            <p class="hint">for</p>
+            Duration (in minutes): <input type="number" name="tempduration" min="0" max="90" step="0.5" id="tempduration">
+            <p class="hint">until</p>
+            Consistency: <select name="Tempconsistency" id="tempconsistency">
+                         <option value="gooey">gooey</option>
+                         <option value="liquid">liquid</option>
+                         <option value="glibbery">glibbery</option>
+                         </select>
+            Colour: <input type="color" name="TemperatureColour" id="tempcolour">
         </fieldset>
+
         <fieldset>
             <legend>Stirring</legend>
-            <legend>Intensity</legend>
-            <span>
-                1
-                <input type="range" name="intensity" min="1" max="5" step="1">
-                5
-            </span>
-            
-            <legend>Stir Duration in Minutes</legend>
-            <input type="number" name="stirMin" id="StirMin" step="1" min="0" max="60" value="0">
-
-            <legend>Consistency</legend>
-            <input type="datalist" name="consistency">
-
-            <label for="color">Color</label>
-            <input type="color" name="color" placeholder="purple" value="#d68aff">
+            0<input type="range" name="Stirringintensity" id="stirring" min="0" max="5" step="1" value="0">5
+            <p class="hint">for</p>
+            Duraton (in minutes): <input type="number" name="stirringduration" min="0" max="60" step="0.5" id="stirringduration">
+            <p class="hint">until</p>
+            Consistency: <select name="Stirringconsistency" id="stirringconsistency">
+                         <option value="gooey">gooey</option>
+                         <option value="liquid">liquid</option>
+                         <option value="glibbery">glibbery</option>
+                         </select>
+            Colour: <input type="color" name="Stirringcolour" id="Stirringcolour">
         </fieldset>
     </div>
-    </form>
+</form>
 
-    <div id="output">
-        <h3>Your Recipe</h3>
-        <button type="submit" id="sendBtn">Send</button>
-    </div>
+<div id="recipe">
+    <h2>YOUR FINAL RECIPE</h2>
+    <div id="result"></div>
+</div>
+
+</div>
 </body>
+
+<footer>
+    <p>IMPRESSUM</p>
+    <p>Prof. Severus Snape</p>
+    <p>Professor for defence against the dark arts and headmaster of Slytherin</p>
+    <p>Hogwarts School of Witchcraft and Wizardy</p>
+    <p>High Street 1 - 28, AB55 Dufftown, Banffshire, Scottland, UK </p>
+</footer>
 </html>
