@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potion Creator</title>
+    <link rel="stylesheet" href="PotionMaker.css">
+    <script src="PotionMaker.js"></script>
+</head>
+<body>
+    <h1>Potion Creator</h1>
+    <form id="form">
+    <div id="recipe">
+        <h3>General Information</h3>
+        <fieldset>
+            <legend>Name</legend>
+            <input type="text" name="potionName" placeholder="This potion is called...">
+        </fieldset>
+        <fieldset>
+            <legend>Risks and Side Effects</legend>
+            <textarea name="description" placeholder="describe risks and side effects here"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Effects</legend>
+            <input type="radio" name="effect" id="love" value="Love" checked>
+            <label for="love">Love</label>
+            <input type="radio" name="effect" id="speed" value="Speed">
+            <label for="speed">Speed</label>
+            <input type="radio" name="effect" id="strength" value="Strength">
+            <label for="strength">Strength</label>
+        </fieldset>
+        <fieldset>
+            <legend>Duration of Effect</legend>
+            <span>
+                0 h
+                <input type="range" name="duration" id="Duration" min="0.1" max="24" step="0.1">
+                24 h
+            </span>
+        </fieldset>
+        
+        <div id="instructions">
+            <h3>Instructions</h3>
+        <fieldset>
+            <legend>Ingredients</legend>
+            <input type="checkbox" name="ingredient" id="spiderLegs" value="SpiderLegs" checked>
+            <label for="spiderLegs">Spider-Legs</label>
+            <input type="number" name="amount" id="amount" step="1" min="1" max="50" value="1" price="450">
+            
+            <input type="checkbox" name="ingredient" id="dragonBlood" value="DragonBlood">
+            <label for="dragonBlood">Dragon-Blood</label>
+            <input type="number" name="amount" id="amount" step="1" min="1" max="50" value="1" price="250">
+            
+            <input type="checkbox" name="ingredient" id="mouseHair" value="MouseHair">
+            <label for="mouseHair">Mouse-Hair</label>
+            <input type="number" name="amount" id="amount" step="1" min="1" max="50" value="1" price="650">
+        </fieldset>
+        <fieldset>
+            <legend>Temperatur in °C</legend>
+            <input type="number" name="temperatur" id="Temperatur" step="1" min="-30" max="150" value="0">
+        </fieldset>
+        <fieldset>
+            <legend>Stirring</legend>
+            <legend>Intensity</legend>
+            <span>
+                1
+                <input type="range" name="intensity" min="1" max="5" step="1">
+                5
+            </span>
+            
+            <legend>Stir Duration in Minutes</legend>
+            <input type="number" name="stirMin" id="StirMin" step="1" min="0" max="60" value="0">
+
+            <legend>Consistency</legend>
+            <input type="datalist" name="consistency">
+
+            <label for="color">Color</label>
+            <input type="color" name="color" placeholder="purple" value="#d68aff">
+        </fieldset>
+    </div>
+    </form>
+
+    <div id="output">
+        <h3>Your Recipe</h3>
+        <button type="submit" id="sendBtn">Send</button>
+    </div>
+</body>
+</html>
