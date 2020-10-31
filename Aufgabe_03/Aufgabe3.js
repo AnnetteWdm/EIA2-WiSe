@@ -73,7 +73,7 @@ var L03_PotionMaker;
                     break;
                 case "Tempconsistency":
                     if (entry[1] != "" && heat.checked || cool.checked)
-                        recipe.innerHTML += "• Anweisung befolgen bis die Konsistenz " + entry[1] + " ist" + "<br>";
+                        recipe.innerHTML += "• Follow instruction until potion is " + entry[1] + "<br>";
                     break;
                 case "TemperatureColour":
                     if (entry[1] != "" && heat.checked || cool.checked)
@@ -109,6 +109,7 @@ var L03_PotionMaker;
             if (entry[0] == "ingredients") {
                 let price = Number(item.getAttribute("price"));
                 let amount = Number(item.getAttribute("amount"));
+                let total;
                 total += price * amount;
                 Currency(price);
                 recipe.innerHTML += amount + item.value + price;
