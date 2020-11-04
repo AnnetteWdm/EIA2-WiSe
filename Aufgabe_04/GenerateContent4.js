@@ -36,8 +36,9 @@ var L04_CocktailBar;
         group.multiple = true;
         for (let item of _items) {
             let option = document.createElement("option");
-            option.value = item.name;
+            option.value = option.textContent = item.name;
             option.setAttribute("price", item.price.toFixed(2));
+            option.id = item.name;
             group.appendChild(option);
         }
         return group;

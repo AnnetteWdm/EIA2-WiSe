@@ -41,8 +41,9 @@ namespace L04_CocktailBar {
 
         for (let item of _items) { 
             let option: HTMLOptionElement = document.createElement("option"); 
-            option.value = item.name;
+            option.value = option.textContent = item.name;
             option.setAttribute("price", item.price.toFixed(2)); 
+            option.id = item.name;
             
             group.appendChild(option);
         }
