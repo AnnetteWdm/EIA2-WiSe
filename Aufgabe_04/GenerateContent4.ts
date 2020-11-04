@@ -23,6 +23,7 @@ namespace L04_CocktailBar {
                     break;
 
                 default:
+                    //Alert: Keine Kathegorie gefunden
                     break;
             }
 

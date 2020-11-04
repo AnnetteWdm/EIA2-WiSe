@@ -20,6 +20,7 @@ var L04_CocktailBar;
                     group = createMultiple(items, category); //zweiter parameter, da in der Funktion zwei parameter angenommen werden
                     break;
                 default:
+                    //Alert: Keine Kathegorie gefunden
                     break;
             }
             //Group wird an jew fieldset angehängt
