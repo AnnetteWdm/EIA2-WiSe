@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Aufgabe4Data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="Aufgabe4CreateContent.js" type="text/javascript" charset="utf-8"></script>
+    <script src="Aufgabe4.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="Aufgabe4.css">
+   
+    <title>L04 Hexenkessel Formular</title>
+</head>
+<body>
+    <header>
+        <h1>MAGIC POTION EDITOR</h1>
+        <p>Create your potion here step by step</p>
+    </header>
+    <div id="container">
+    
+    <form>
+    <div id="Infoform">
+        <h2>Potion Information</h2>
+        <fieldset>
+            <legend>Name of potion</legend>
+            <input type="text" name="potion" id="potionname" placeholder="type name of potion here">
+        </fieldset>
+
+        <fieldset>
+            <legend>Risks and Sideeffects</legend>
+            <textarea name="description" id="description" cols="45" rows="2" placeholder="describe risks and side effects here"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Effect and Duration</legend>
+            <div id="Effect"></div>
+
+        </fieldset>
+    </div>
+
+    <div id="instructionsform">
+        <h2>Potion Information</h2>
+        <fieldset>
+            <legend>Ingredients</legend>
+            <div id="Ingredients"></div>
+            <button type="button" id="ingredients">Add</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Temperature</legend>
+                    <label for="heat">
+                    <input type="radio" name="Temperature" id="heat" value="heat potion">heat
+                    </label>
+                    <label for="cool">
+                    <input type="radio" name="Temperature" id="cool" value="cool potion">cool down
+                    </label>
+                    <label for="temperature">to
+                    <input type="number" name="Degree" min="-200" max="100" step="0.1" id="temperature">°C
+                    </label>
+            <p class="hint">for</p>
+            Duration (in minutes): <input type="number" name="tempduration" min="0" max="90" step="0.5" id="tempduration">
+            <p class="hint">until</p>
+            Consistency: <select name="Tempconsistency" id="tempconsistency">
+                         <option value="gooey">gooey</option>
+                         <option value="liquid">liquid</option>
+                         <option value="glibbery">glibbery</option>
+                         </select>
+            Colour: <input type="color" name="TemperatureColour" id="tempcolour">
+            <button type="button" id="heat">Add</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Stirring</legend>
+            0<input type="range" name="Stirringintensity" id="stirring" min="0" max="5" step="1" value="0">5
+            <p class="hint">for</p>
+            Duraton (in minutes): <input type="number" name="stirringduration" min="0" max="60" step="0.5" id="stirringduration">
+            <p class="hint">until</p>
+            Consistency: <select name="Stirringconsistency" id="stirringconsistency">
+                         <option value="gooey">gooey</option>
+                         <option value="liquid">liquid</option>
+                         <option value="glibbery">glibbery</option>
+                         </select>
+            Colour: <input type="color" name="Stirringcolour" id="Stirringcolour">
+            <button type="button" id="stir">Add</button>
+        </fieldset>
+    </div>
+    
+    <button type="button" id="delete">Delete last</button>
+    <button type="button" id="deleteAll">Delete All</button>
+</form>
+
+<div id="recipe">
+    <h2>YOUR FINAL RECIPE</h2>
+    <div id="recipeInfo"></div>
+    <div id="action"></div>
+    <div id="totalprice"></div>
+</div>
+
+</div>
+</body>
+
+<footer>
+    <p>IMPRESSUM</p>
+    <p>Prof. Severus Snape</p>
+    <p>Professor for defence against the dark arts and headmaster of Slytherin</p>
+    <p>Hogwarts School of Witchcraft and Wizardy</p>
+    <p>High Street 1 - 28, AB55 Dufftown, Banffshire, Scottland, UK </p>
+</footer>
+</html>

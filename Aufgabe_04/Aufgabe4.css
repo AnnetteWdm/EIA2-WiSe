@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 11pt;
+}
+
+header{
+    text-align: center;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    color: rgb(241, 241, 241);
+    height: 140px;
+}
+
+footer{
+    text-align: left;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    color: rgb(241, 241, 241);
+    height: 140px;
+    margin-top: 1100px;
+
+}
+
+h1{
+    font-size: 20pt;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+}
+
+h2{
+    font-size: 15pt;
+    padding-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header p{
+    font-size: 10pt;
+}
+
+ul{
+    list-style-type: none;
+}
+
+div{
+    padding-bottom: 5px;
+}
+
+legend{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+fieldset{
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(220, 227, 236);
+}
+
+#Infoform{
+    /* overflow: auto; */
+    position: relative;
+    width: calc(50% - 40px);
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    height: calc(100vh - 190px);
+}
+
+#instructionsform{
+    /* overflow: auto; */
+    position: relative;
+    width: calc(50% - 40px);
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    height: calc(100vh - 190px);
+}
+
+
+#recipe{
+    border-color: black;
+    border-style: dashed;
+    position: relative;
+    width: calc(50% - 40px);
+    margin: 10px;
+    margin-top: -250px;
+    padding: 10px;
+    float: left;
+    height: calc(100vh - 190px);
+}
+
+#container{
+    position: absolute;
+    width: 100%;
+}
+
+#result{
+    padding: 10px;
+    margin-top: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type=number]{
+    /* border: 0.5px solid black; */
+    /* border-radius: 5px; */
+    width: 40px;
+    height: 15px;
+}
+
+input[type=color]{
+    height: 20px;
+    border-radius: 10px;
+}
+
+.hint{
+    padding-top: 10px;
+    color: rgb(0, 0, 100);
+}
