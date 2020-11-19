@@ -1,0 +1,21 @@
+{
+  "name": "eia2-wise20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start" : "node Aufgabe_06/test.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnetteWdm/EIA2-WiSe20.git"
+  },
+  "author": "Annette",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnetteWdm/EIA2-WiSe20/issues"
+  },
+  "homepage": "https://github.com/AnnetteWdm/EIA2-WiSe20#readme"
+}
