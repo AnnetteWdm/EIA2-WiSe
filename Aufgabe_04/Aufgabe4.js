@@ -1,5 +1,6 @@
 var L04_Hexenkessel;
 (function (L04_Hexenkessel) {
+    L04_Hexenkessel.generateContent(L04_Hexenkessel.data);
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         let infoform = document.querySelector("div#Infoform");
