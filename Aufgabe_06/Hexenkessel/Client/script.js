@@ -46,7 +46,7 @@ var L06_Hexenkessel;
             let value = document.getElementById("Zutaten_value").value;
             let price = parseInt(value) * parseInt(select.selectedOptions[0].getAttribute("price"));
             let priceInString = priceInCurrency(price, false);
-            p.innerHTML = "Add " + value + " Stück/ml " + select.value + " (" + priceInString + ") <br>";
+            p.innerHTML = "Add " + value + " Amount/ml " + select.value + " (" + priceInString + ") <br>";
             document.getElementById("total").innerHTML = "<b>Total price: " + priceInCurrency(total, true) + "</b>";
             p.setAttribute("preis", price.toFixed(0));
             action.appendChild(p);
