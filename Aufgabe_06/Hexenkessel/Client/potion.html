@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="client.js"></script>
+    <script src="generate.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MAGIC POTION EDITOR</h1>
+        <p>Create your potion here step by step</p>
+    </header>
+    
+    <main>
+        <form id="formular">
+            <fieldset id="general">
+                <legend>Basics</legend>
+                <label for="Trankname">Potionname</label><br>
+                <input type="text" id="Trankname" name="Trankname" placeholder="type name here"><br>
+                <br>
+                <label for="textarea">Risks and Side effects</label><br>
+                <textarea id="textarea"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Effect</legend>
+                <div id="Wirkung"></div>
+            </fieldset>
+
+            <div id="act"></div>
+        </form>
+
+
+        <form id="button">
+            <fieldset>
+            <legend>Add Ingredients</legend>
+            <div id="Zutaten"></div>
+            <button type="button" id="ingredients">Add</button>
+            </fieldset>
+
+            <fieldset>
+            <legend>Heat-Instruction</legend>
+            <div>
+                <input name="heat" id="heat_input" type="range" min="1" max="60" step="1" value="20">
+                <input type="text" id="bubbleheat_input" value="20" class="time" disabled> °C <br>
+                <input type="checkbox" id="Konsistenz_Heat" name="heating" value="Konsistenz"> 
+                <label for="Konsistenz_Heat">Until potion has the consistency:</label>
+                <p class="reveal">
+                    <select id="Konsistenz_value">
+                        <option value="zaeh">gewy</option>
+                        <option value="cremig">creamy</option>
+                        <option value="luftig">fluffy</option>
+                    </select>
+                </p>
+                <input type="checkbox" id="HeatTime" name="heating" value="HeatTime"> 
+                <label for="HeatTime">For a duration of:</label>
+                <p class="reveal">
+                    <input id="HeatTime_value" type="range" min="1" max="200" step="1" value="1">
+                    <input type="text" id="bubbleHeatTime_value" value="20" class="time" disabled> min <br>
+                </p>
+                <input type="checkbox" id="HeatColor" name="heating" value="Color"> 
+                <label for="HeatColor">Until it has the colour:</label>
+                <p class="reveal"><input type="color" id="Color" name="color"></p>
+            </div>    
+            <button type="button" id="heat">Add</button>
+            </fieldset>
+            
+            <fieldset>
+            <legend>Stir-Instruction</legend>
+            <div>
+                <select name="stir" id="stiring">
+                    <option value="unterheben">careful stirring</option>
+                    <option value="leicht">heavy stirring</option>
+                </select>
+                <br>
+                <input type="checkbox" id="Konsistenz" name="stiring" value="Konsistenz"> 
+                <label for="Konsistenz">Until it has the consistency:</label>
+                <p class="reveal">
+                    <select id="Konsistenz_stir">
+                        <option value="zaeh">gewy</option>
+                        <option value="cremig">creamy</option>
+                        <option value="luftig">fluffy</option>
+                    </select>
+                </p>
+                <input type="checkbox" id="stirTime" name="stiring" value="stirTime"> 
+                <label for="stirTime">For a duration of:</label>
+                <p class="reveal">
+                    <input id="stirTime_value" type="range" min="1" max="200" step="1" value="1"></input>
+                    <input type="text" id="bubblestirTime_value" value="20" class="time" disabled> min <br>
+                </p>
+                
+                <input type="checkbox" id="stirColor" name="stiring" value="stirColor"> 
+                <label for="stirColor">Until it has the colour:</label>
+                <p class="reveal"><input type="color" id="ColorStiring" name="color"></p>
+            </div>
+            <button type="button" id="stir">Add</button>
+            </fieldset>
+
+        </form>
+
+        <fieldset>
+        <div id="recipe">
+            <h1>Recipe</h1>
+
+            <div id="basic"><h2>General Information</h2></div>
+            <h2>Instructions</h2>
+            <div id="action"></div>
+            <div id="total"></div>
+            <button type="button" id="delete">Delete last</button>
+            <button type="button" id="deleteAll">Delete All</button>
+        </div>
+        </fieldset>
+
+        <form id="send" method="GET">
+            <button type="button" id="submit">Submit</button>
+        </form>
+        
+    </main>
+    
+</body>
+
+<footer>
+    <p>IMPRESSUM</p>
+    <p>Prof. Severus Snape</p>
+    <p>Professor for defence against the dark arts and headmaster of Slytherin</p>
+    <p>Hogwarts School of Witchcraft and Wizardy</p>
+    <p>High Street 1 - 28, AB55 Dufftown, Banffshire, Scottland, UK </p>
+</footer>
+
+</html>
