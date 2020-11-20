@@ -33,9 +33,9 @@ namespace L06_Hexenkessel {
                 basic.innerHTML += attribute.name + ": " + attribute.value + "<br>";
         }
         if (select)
-            basic.innerHTML += "Wirkung: " + select.value + "<br>";
+            basic.innerHTML += "Effect: " + select.value + "<br>";
         if (textarea.value != "")
-            basic.innerHTML += "Beschreibung, Risiken und Nebenwirkungen: <br>" + textarea.value + "<br>";
+            basic.innerHTML += "Description of risks and side effects: <br>" + textarea.value + "<br>";
     }
     function handleButton(_event: Event): void {
         let clickedButton: HTMLElement = <HTMLElement>_event.target;
@@ -49,8 +49,8 @@ namespace L06_Hexenkessel {
             let value: string = (<HTMLInputElement>document.getElementById("Zutaten_value")).value;
             let price: number = parseInt(value) * parseInt(select.selectedOptions[0].getAttribute("price")!);
             let priceInString: string =  priceInCurrency(price, false);
-            p.innerHTML = "Füge " + value + " Stück/ml " + select.value + " hinzu. (" + priceInString  + ") <br>";
-            document.getElementById("total")!.innerHTML = "<b>Gesamtpreis: " + priceInCurrency(total, true) + "</b>";
+            p.innerHTML = "Add " + value + " Stück/ml " + select.value + " (" + priceInString  + ") <br>";
+            document.getElementById("total")!.innerHTML = "<b>Total price: " + priceInCurrency(total, true) + "</b>";
             p.setAttribute("preis", price.toFixed(0));
             action.appendChild(p);
             div.appendChild(input("Menge", value, "small"));
@@ -61,24 +61,24 @@ namespace L06_Hexenkessel {
             if (clickedButton.id == "heat") {
                 switch (entry[0]) {
                     case "heat":
-                        p.innerHTML = "Bringe es auf " + entry[1] + " °C <br>";
+                        p.innerHTML = "Bring the potion to " + entry[1] + " °C <br>";
                         div.appendChild(input("heat", "Erhitzen", "mid"));
                         div.appendChild(input("temperature", entry[1].toString(), "small"));
                         break;
                     case "heating":
                         switch (entry[1]) {
                             case "Konsistenz":
-                                p.innerHTML += "Bis es " + (<HTMLSelectElement>document.querySelector("select#Konsistenz_value")).value + " wird. ";
+                                p.innerHTML += "Until it is " + (<HTMLSelectElement>document.querySelector("select#Konsistenz_value")).value;
                                 div.appendChild(input("Konsistenz", (<HTMLSelectElement>document.querySelector("select#Konsistenz_value")).value, "mid"));
                                 break;
                             case "HeatTime":
-                                p.innerHTML += "Für " + (<HTMLInputElement>document.getElementById(entry[1] + "_value")).value + " min. ";
+                                p.innerHTML += "For " + (<HTMLInputElement>document.getElementById(entry[1] + "_value")).value + " min. ";
                                 div.appendChild(input("HeatTime", (<HTMLInputElement>document.getElementById(entry[1] + "_value")).value, "mid"));
                                 break;    
                             case "Color":
                                 let colordiv: HTMLDivElement = document.createElement("div");
                                 colordiv.setAttribute("style", "background-color:" + (<HTMLInputElement>document.getElementById("Color")!).value + "; width: 60px; height: 30px");
-                                p.innerHTML += "Bis solch eine Farbe erreicht wird";
+                                p.innerHTML += "Until it has this colour:";
                                 p.appendChild(colordiv); 
                                 div.appendChild(input("Color", (<HTMLInputElement>document.getElementById("Color")!).value, "mid"));
                                 break;
@@ -93,17 +93,17 @@ namespace L06_Hexenkessel {
                     case "stiring":
                         switch (entry[1]) {
                         case "Konsistenz":
-                            p.innerHTML += "Bis es " + (<HTMLSelectElement>document.querySelector("select#Konsistenz_stir")).value + " wird. ";
+                            p.innerHTML += "Until it is " + (<HTMLSelectElement>document.querySelector("select#Konsistenz_stir")).value;
                             div.appendChild(input("stirKonsistenz", (<HTMLSelectElement>document.querySelector("select#Konsistenz_stir")).value, "mid"));
                             break;
                         case "stirTime":
-                            p.innerHTML += "Für " + (<HTMLInputElement>document.getElementById(entry[1] + "_value")).value + " min. ";
+                            p.innerHTML += "For " + (<HTMLInputElement>document.getElementById(entry[1] + "_value")).value + " min. ";
                             div.appendChild(input("stirTime", (<HTMLInputElement>document.getElementById(entry[1] + "_value")).value, "mid"));
                             break;    
                         case "stirColor":
                             let stirColorDiv: HTMLDivElement = document.createElement("div");
                             stirColorDiv.setAttribute("style", "background-color:" + (<HTMLInputElement>document.getElementById("ColorStiring")!).value + "; width: 60px; height: 30px");
-                            p.innerHTML += "Bis solch eine Farbe erreicht wird";
+                            p.innerHTML += "Until it has this colour:";
                             p.appendChild(stirColorDiv);
                             div.appendChild(input("stirColor", (<HTMLInputElement>document.getElementById("ColorStiring")!).value, "mid"));
                      } 

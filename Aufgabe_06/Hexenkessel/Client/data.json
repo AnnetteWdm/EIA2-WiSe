@@ -1,10 +1,9 @@
 {
     "Wirkung":[
-        {"name":"Liebestrank"},{"name":"Schlaftrunk"},{"name":"Alterstrunk"},
-        {"name":"Euphorie-Trank"},{"name":"Glückstrank"},{"name":"Gegengift"},
-        {"name":"Elixir des Lebens"},{"name":"Wahrheitselixir"},{"name":"Vielsafttrank"},{"name":"Stärketrunk"}],
+        {"name":"Lovepotion"},{"name":"Sleeppotion"},{"name":"Agingpotion"},
+        {"name":"Luckpotion"},{"name":"Potion of truth"},{"name":"Strenghtpotion"}],
     "Zutaten":[
-        {"name":"Rattenschwanz","price":10,"stepper":true},{"name":"Spinnenbeine","price":5,"stepper":true},{"name":"Aalaugen","price":15,"stepper":true},
-        {"name":"Blutegel","price":20,"stepper":true},{"name":"Echsenblut","price":5,"stepper":false},{"name":"Einhorntränen","price":300,"stepper":false},
-        {"name":"Flubberwurmschleim","price":50,"stepper":false},{"name":"Gift","price":60,"stepper":false}]
+        {"name":"Rattails","price":10,"stepper":true},{"name":"Spiderlegs","price":5,"stepper":true},{"name":"Eeleyes","price":15,"stepper":true},
+        {"name":"Squid","price":20,"stepper":true},{"name":"Blood","price":5,"stepper":false},{"name":"Unicorntears","price":300,"stepper":false},
+        {"name":"Slime","price":50,"stepper":false},{"name":"poison","price":60,"stepper":false}]
 }
